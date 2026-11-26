@@ -1,0 +1,1010 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #fff1d6;
+    color: #850c0c;
+    font-family: Georgia,serif;
+}
+body.locked {
+    overflow: hidden;
+}
+main {
+    width: min(100%,56.25svh);
+    margin: auto;
+}
+.page {
+    position: relative;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+    isolation: isolate;
+}
+.art {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.opening .welcome {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity var(--opening) ease;
+}
+.opening.open .welcome {
+    opacity: 1;
+}
+.hot {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: transparent;
+}
+.tap {
+    left: 27%;
+    top: 60%;
+    width: 46%;
+    height: 8%;
+    border-radius: 30px;
+    animation: pulse 2s infinite;
+}
+.open .tap {
+    display: none;
+}
+.particles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.scratch {
+    position: absolute;
+    left: 13%;
+    top: 28.3%;
+    width: 74%;
+    height: 24%;
+    background: #fff1d6;
+    display: grid;
+    place-items: center;
+    border-radius: 5%;
+    overflow: hidden;
+}
+.date {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    gap: .4em;
+    background: radial-gradient(ellipse,#fff9df,#f5cf78);
+    font-size: clamp(12px,3.7vw,24px);
+}
+.date strong {
+    font-size: 1.55em;
+}
+.scratch canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+.calendar {
+    left: 34%;
+    top: 73%;
+    width: 32%;
+    height: 4%;
+}
+.location {
+    left: 34%;
+    top: 69%;
+    width: 32%;
+    height: 8%;
+}
+.lotus {
+    position: absolute;
+    left: 31%;
+    top: 46%;
+    width: 38%;
+    height: 14%;
+    pointer-events: none;
+    background: radial-gradient(ellipse,#fff6a755,transparent 65%);
+    animation: pulse 3s infinite;
+}
+.page:not(.opening) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 100svh;
+}
+@keyframes pulse {
+    50% {
+        filter: brightness(1.3);
+        box-shadow: 0 0 18px #ffcf5377;
+    }
+}
+@keyframes shine {
+    to {
+        background-position: -250% 0;
+    }
+}
+@media(prefers-reduced-motion:reduce) {
+    * {
+        animation: none!important;
+    }
+}
+/* Stationary temple, only the central opening changes. */
+.opening .welcome {
+    clip-path: polygon(15% 32%,18% 27%,24% 23%,35% 22%,50% 22%,65% 22%,76% 23%,82% 27%,85% 32%,85% 82.5%,15% 82.5%);
+    transition: opacity var(--opening) ease-in-out;
+    mask-image: linear-gradient(to bottom,transparent 21%,black 24%,black 80%,transparent 83%);
+}
+.tap {
+    top: 60.5%;
+    left: 28%;
+    width: 44%;
+    height: 7%;
+}
+.particles {
+    clip-path: polygon(15% 32%,18% 27%,24% 23%,35% 22%,65% 22%,76% 23%,82% 27%,85% 32%,85% 82.5%,15% 82.5%);
+}
+.page {
+    container-type: inline-size;
+}
+.page:not(.opening) {
+    content-visibility: visible;
+    contain-intrinsic-size: none;
+}
+.scratch {
+    left: 13%;
+    top: 39.7%;
+    width: 74%;
+    height: 13%;
+    background: transparent;
+    border-radius: 12%;
+    overflow: hidden;
+}
+.date {
+    background: transparent;
+    display: block;
+    font-size: 4cqw;
+    gap: 0;
+}
+.date span:first-child {
+    position: absolute;
+    top: 17%;
+    left: 37%;
+    width: 52%;
+    font-style: italic;
+    font-weight: bold;
+}
+.date strong {
+    position: absolute;
+    top: 34%;
+    left: 30%;
+    width: 64%;
+    font-size: 1.35em;
+}
+.date span:last-child {
+    position: absolute;
+    top: 67%;
+    left: 30%;
+    width: 64%;
+    font-size: .69em;
+    color: #fff5cb;
+    font-style: italic;
+}
+.scratch.done .date:after {
+    background: linear-gradient(110deg,transparent 30%,#fff6aa88 50%,transparent 70%);
+    animation: shine 2.8s linear infinite;
+}
+.scratch canvas {
+    border-radius: 12%;
+}
+.calendar {
+    top: 73.4%;
+    left: 35%;
+    width: 30%;
+    height: 3.5%;
+}
+.lotus {
+    left: 27%;
+    top: 47%;
+    width: 46%;
+    height: 13%;
+    background: radial-gradient(ellipse,#fff6a988,transparent 65%);
+    animation: lotusGlow 2.8s infinite;
+    mix-blend-mode: screen;
+}
+@keyframes lotusGlow {
+    50% {
+        opacity: .25;
+        filter: brightness(1.5);
+    }
+}
+@keyframes float {
+    50% {
+        transform: translateY(-2px);
+    }
+}
+/* Stable, transparent effects; never change layout on timer updates. */
+.global-magic {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100%,56.25svh);
+    height: 100%;
+    pointer-events: none;
+}
+.scratch.done .date:after {
+    inset: 0;
+    border-radius: 48%;
+    background: radial-gradient(ellipse at 25% 20%,#fff8bd99,transparent 30%),radial-gradient(ellipse at 75% 80%,#ffbd3355,transparent 35%);
+    background-size: 180% 160%;
+    mix-blend-mode: screen;
+    animation: liquidFlow 4s ease-in-out infinite;
+    z-index: 2;
+}
+.scratch.done:after {
+    content: '';
+    position: absolute;
+    inset: 4% 1%;
+    border-radius: 45%;
+    border: 2px solid #ffdf77aa;
+    box-shadow: inset 0 0 12px #ffd34d88,0 0 10px #ffcf4e99;
+    pointer-events: none;
+    animation: liquidRing 3s ease-in-out infinite;
+}
+@keyframes liquidFlow {
+    0%,100% {
+        background-position: 0% 30%;
+    }
+    50% {
+        background-position: 100% 70%;
+    }
+}
+@keyframes liquidRing {
+    50% {
+        transform: scale(.97,.88);
+        opacity: .45;
+    }
+}
+.lotus {
+    animation: none;
+    opacity: 1;
+    left: 26%;
+    top: 48%;
+    width: 48%;
+    height: 12%;
+    background: radial-gradient(ellipse,#fff5b477,transparent 65%);
+}
+.lotus i {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #fffbe1;
+    border-radius: 50%;
+    box-shadow: 0 0 7px 2px #ffdf67;
+    animation: sparkle 3s ease-in-out infinite;
+}
+.lotus i:before,.lotus i:after {
+    content: '';
+    position: absolute;
+    background: #fff9ce;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.lotus i:before {
+    width: 1px;
+    height: 9px;
+}
+.lotus i:after {
+    width: 9px;
+    height: 1px;
+}
+@keyframes sparkle {
+    0%,100% {
+        opacity: .15;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/* Step 4 layout refinement: one large scratch surface, centered date and fixed calendar. */
+.scratch {
+    left: 9%;
+    top: 29.2%;
+    width: 82%;
+    height: 23%;
+    border-radius: 0;
+    overflow: hidden;
+    display: block;
+}
+.date {
+    inset: 5% 1%;
+    border-radius: 44% 32% 42% 30% / 30% 36% 28% 38%;
+    border: 2px solid #efb33c;
+    background: radial-gradient(ellipse,#fff8e5 20%,#ffe5a5 76%,#f8cf72);
+    box-shadow: inset 0 0 14px #fff9d5,0 0 10px #ffce69;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    font-size: 4.2cqw;
+    padding: 5% 4%;
+    isolation: isolate;
+}
+.date span:first-child,.date strong,.date span:last-child {
+    position: relative;
+    inset: auto;
+    width: auto;
+    z-index: 3;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+.date strong {
+    font-size: 1.45em;
+}
+.date span:last-child {
+    font-size: .79em;
+    background: #8b0808;
+    border: 1px solid #eab63e;
+    border-radius: 999px;
+    padding: .4em 1em;
+    color: #fff5cb;
+    max-width: 100%;
+    font-weight: bold;
+}
+.scratch canvas {
+    border-radius: 0;
+}
+.scratch.done:after {
+    inset: 5% 1%;
+    border-radius: 40%;
+    z-index: 1;
+}
+.scratch.done .date:after {
+    z-index: 1;
+}
+.calendar {
+    left: 29%;
+    top: 72.6%;
+    width: 42%;
+    height: 4.8%;
+}
+/* V8: reserve scrollbar space even when the entrance is locked. */
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+body {
+    overflow-x: clip;
+}
+body.locked {
+    overflow: clip;
+    height: 100svh;
+}
+html:has(body.locked) {
+    overscroll-behavior: none;
+}
+main {
+    width: min(100%,56.25svh);
+    max-width: 100%;
+    margin-inline: auto;
+}
+.global-magic {
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    transform: none;
+    max-width: 100%;
+}
+.tap {
+    animation: breathingGlow 2.5s ease-in-out infinite;
+    filter: none;
+}
+.open .tap {
+    animation: none;
+    display: none;
+}
+@keyframes breathingGlow {
+    0%,100% {
+        box-shadow: 0 0 3px 1px #ffcf5333;
+    }
+    50% {
+        box-shadow: 0 0 18px 3px #ffcf53aa;
+    }
+}
+.scratch {
+    left: 8%;
+    width: 84%;
+    top: 29%;
+    height: 23.5%;
+}
+.date {
+    inset: 9% 1%;
+    background: radial-gradient(ellipse,#fff8e5aa 20%,#ffe5a566 76%,#f8cf7299);
+    gap: 7%;
+    padding: 4% 5%;
+    font-size: 4.2cqw;
+}
+.date strong {
+    font-size: 1.35em;
+    max-width: 100%;
+}
+.date span:last-child {
+    font-size: .82em;
+    min-width: 70%;
+    max-width: 100%;
+    padding: .45em .65em;
+    line-height: 1.2;
+    flex-shrink: 0;
+    text-align: center;
+}
+.calendar {
+    top: 72.6%;
+    left: 29%;
+    width: 42%;
+    height: 4.8%;
+}
+/* V8 updated: original artwork-based Liquid Gold, one stable reveal footprint. */
+.scratch {
+    left: 9%;
+    width: 82%;
+    top: 32%;
+    height: 17%;
+    overflow: visible;
+    display: block;
+    background: transparent;
+    container-type: inline-size;
+}
+.date {
+    inset: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--asset-date_reveal_jpg) center/100% 100% no-repeat;
+    padding: 0;
+    display: block;
+    opacity: 0;
+    isolation: isolate;
+    font-size: 5cqw;
+}
+.scratch.scratching .date,.scratch.done .date {
+    opacity: 1;
+}
+.date span:first-child {
+    position: absolute;
+    top: 18%;
+    left: 36%;
+    width: 52%;
+    font-size: 1em;
+}
+.date strong {
+    position: absolute;
+    top: 36%;
+    left: 33%;
+    width: 57%;
+    font-size: 1.28em;
+}
+.date span:last-child {
+    position: absolute;
+    top: 64%;
+    left: 25%;
+    width: 55%;
+    min-width: 0;
+    max-width: none;
+    font-size: .72em;
+    padding: .35em .2em;
+    line-height: 1.2;
+}
+.scratch canvas {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+.scratch.done:after {
+    display: none;
+}
+.scratch.done .date:after {
+    border-radius: 0;
+    opacity: .45;
+    z-index: 1;
+}
+.tap {
+    left: 28%;
+    top: 61.1%;
+    width: 44%;
+    height: 6.3%;
+    border-radius: 40%;
+    animation: breathingGlow 2.5s ease-in-out infinite;
+}
+.open .tap {
+    animation: none;
+    display: none;
+}
+/* Scratch input stays above the reveal artwork. */
+.scratch canvas {
+    z-index: 5;
+    pointer-events: auto;
+    touch-action: none;
+    cursor: crosshair;
+}
+.scratch .date {
+    pointer-events: none;
+}
+/* Single authoritative royal scroll state. */
+.scroll {
+    position: absolute;
+    left: 17.59%;
+    top: 58.594%;
+    width: 64.583%;
+    height: 14.323%;
+    overflow: hidden;
+    isolation: isolate;
+}
+.scroll-body {
+    position: absolute;
+    inset: 25.455% 0 27.273%;
+    background: var(--asset-scroll_body_jpg) center/100% 100% no-repeat;
+    clip-path: inset(50% 0);
+    visibility: hidden;
+    transition: clip-path 1.4s ease,visibility 0s linear 1.4s;
+}
+.scroll.open .scroll-body {
+    visibility: visible;
+    clip-path: inset(0);
+    transition: clip-path 1.4s ease;
+}
+.scroll .roller {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 25.455%;
+    background: var(--asset-scroll_upper_jpg) center/100% 100% no-repeat;
+    top: 24.545%;
+    z-index: 3;
+    transition: top 1.4s ease;
+}
+.scroll .lower {
+    height: 27.273%;
+    top: 50%;
+    background-image: var(--asset-scroll_lower_jpg);
+}
+.scroll.open .upper {
+    top: 0;
+}
+.scroll.open .lower {
+    top: 72.727%;
+}
+.scroll .time {
+    position: absolute;
+    inset: 26% 10% 28%;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    align-items: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+.scroll.open .time {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .35s ease 1.4s;
+}
+.time span {
+    position: relative;
+    z-index: 1;
+    font-size: 4.4cqw;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+.time b,.time small {
+    display: block;
+}
+.time small {
+    font-size: .47em;
+    margin-top: .25em;
+}
+.scroll.open .time:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 20% 100%,#fff8bbaa,transparent 45%),radial-gradient(ellipse at 75% 85%,#ffdc6688,transparent 45%);
+    background-size: 180% 120%;
+    animation: liquidFlow 4s ease-in-out infinite;
+}
+/* Final alignment and seamless overlay edges. */
+.tap {
+    left: 28%;
+    top: 61.1%;
+    width: 44%;
+    height: 6.3%;
+    border-radius: 40%;
+    animation: breathingGlow 2.5s ease-in-out infinite;
+}
+.tap:before {
+    display: none;
+}
+.open .tap {
+    display: none;
+    animation: none;
+}
+.scratch {
+    left: 7%;
+    width: 86%;
+    top: 32%;
+    height: 15%;
+    overflow: visible;
+}
+.date {
+    background-image: var(--asset-date_reveal_png);
+    font-size: 4.6cqw;
+}
+.date span:first-child {
+    left: 35%;
+    width: 43%;
+    top: 15%;
+}
+.date strong {
+    left: 35%;
+    width: 43%;
+    top: 33%;
+    font-size: 1.12em;
+}
+.date span:last-child {
+    left: 24%;
+    width: 52%;
+    top: 65%;
+    font-size: .70em;
+    padding: .30em .15em;
+}
+.scratch.done .date:after {
+    mask-image: radial-gradient(ellipse,black 35%,transparent 73%);
+}
+.scroll {
+    top: 58.2%;
+    left: 16%;
+    width: 68%;
+    height: 14.3%;
+}
+.scroll-body {
+    background-image: var(--asset-scroll_body_png);
+}
+.scroll .roller {
+    background-image: var(--asset-scroll_upper_png);
+    top: 24.545%;
+}
+.scroll .lower {
+    background-image: var(--asset-scroll_lower_png);
+    top: 48%;
+}
+.scroll.open .upper {
+    top: 0;
+}
+.scroll.open .lower {
+    top: 72.727%;
+}
+.scroll:not(.open) .scroll-body,.scroll:not(.open) .time {
+    visibility: hidden;
+    opacity: 0;
+}
+.global-magic {
+    opacity: 1;
+    animation: none;
+}
+/* V8 spacing revision: proportional movement constrained by the fixed title and temple. */
+.scratch {
+    top: 28.8%;
+    height: 15%;
+    left: 7%;
+    width: 86%;
+}
+.countdown-heading {
+    position: absolute;
+    left: 19.9%;
+    width: 60.2%;
+    top: 44.8%;
+    height: 5.73%;
+    object-fit: contain;
+    pointer-events: none;
+}
+.scroll {
+    top: 50.5%;
+    height: 14.3%;
+    left: 16%;
+    width: 68%;
+}
+.scroll:not(.open) .upper {
+    top: 25%;
+}
+.scroll:not(.open) .lower {
+    top: 49%;
+}
+.calendar {
+    top: 66.3%;
+    left: 26.85%;
+    width: 46.3%;
+    height: 5.73%;
+    padding: 0;
+    background: none;
+    border: 0;
+    overflow: visible;
+}
+.calendar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.calendar-caption {
+    position: absolute;
+    left: 26.4%;
+    width: 47.2%;
+    top: 72%;
+    height: 3.65%;
+    object-fit: contain;
+    pointer-events: none;
+}
+.date strong {
+    font-size: 1.04em;
+    left: 31%;
+    width: 49%;
+}
+.date span:first-child {
+    left: 31%;
+    width: 49%;
+}
+/* Heading enlargement and calendar spacing: responsive artwork coordinates. */
+.countdown-heading {
+    left: 12.375%;
+    width: 75.25%;
+    top: 43.4%;
+    height: 7.1625%;
+}
+.calendar {
+    top: 68.82%;
+}
+.calendar-caption {
+    top: 74.52%;
+}
+/* Position adjustment: 2 cm heading group, 1 cm calendar group, proportional to artwork. */
+.countdown-heading {
+    top: 45.92%;
+}
+.scroll {
+    top: 53.02%;
+}
+.calendar {
+    top: 70.08%;
+}
+.calendar-caption {
+    top: 75.78%;
+}
+/* Step 7: artwork-aligned, stationary lotus with visible localized highlights. */
+.page:has(.lotus) .art {
+    object-fit: contain;
+    object-position: center;
+}
+.page .lotus {
+    left: 29%;
+    top: 44.8%;
+    width: 42%;
+    height: 15%;
+    z-index: 4;
+    mix-blend-mode: normal;
+    animation: none;
+    box-shadow: none;
+    filter: none;
+    background: radial-gradient(ellipse at 50% 61%,rgba(255,216,77,.24),transparent 58%);
+    overflow: visible;
+}
+.page .lotus i {
+    width: 3px;
+    height: 3px;
+    background: #fffdf0;
+    box-shadow: 0 0 5px 2px #ffc12e,0 0 10px #e99a00;
+    animation: lotusTwinkle 2.4s ease-in-out infinite;
+    opacity: .75;
+}
+.page .lotus i:before,.page .lotus i:after {
+    background: #fffce5;
+    box-shadow: 0 0 3px #eaa400;
+}
+.page .lotus i:before {
+    height: 10px;
+    width: 1px;
+}
+.page .lotus i:after {
+    width: 10px;
+    height: 1px;
+}
+@keyframes lotusTwinkle {
+    0%,100% {
+        opacity: .28;
+    }
+    45%,60% {
+        opacity: 1;
+    }
+}
+@media(prefers-reduced-motion:reduce) {
+    .page .lotus i {
+        animation: none;
+        opacity: .8;
+    }
+}
+/* Step 1 only: balanced calligraphy and family lines. */
+.family-name {
+    position: absolute;
+    text-align: center;
+    color: #990d10;
+    pointer-events: none;
+    line-height: 1.08;
+    font-family: Georgia,serif;
+}
+.groom-name,.bride-name {
+    font-family: "Monotype Corsiva","Apple Chancery","URW Chancery L",cursive;
+    font-style: italic;
+    font-weight: 600;
+    -webkit-text-stroke: .15px currentColor;
+    white-space: nowrap;
+    left: 48%;
+    width: 44%;
+    font-size: 9.1cqw;
+    line-height: 1.1;
+}
+.groom-name {
+    top: 37.5%;
+}
+.bride-name {
+    top: 53.2%;
+}
+.groom-parents,.bride-parents {
+    left: 49%;
+    width: 43%;
+    font-size: 3.15cqw;
+    font-weight: 600;
+    line-height: 1.12;
+    white-space: normal;
+}
+.groom-parents {
+    top: 44.3%;
+}
+.bride-parents {
+    top: 61.4%;
+}
+/* Default names use consistent rendered calligraphy; custom names remain editable. */
+.family-name.name-art {
+    height: 6.5%;
+    font-size: 0!important;
+    line-height: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.groom-name.name-art {
+    background-image: var(--asset-groom_calligraphy_png);
+}
+.bride-name.name-art {
+    background-image: var(--asset-bride_calligraphy_png);
+}
+/* Balanced family spacing: equal clearance around original ampersand. */
+.groom-name {
+    top: 37.5%;
+}
+.groom-parents {
+    top: 44.3%;
+}
+.bride-name {
+    top: 54.1%;
+}
+.bride-parents {
+    top: 60.9%;
+}
+/* Final requested refinements */
+.family-ampersand {
+    position: absolute;
+    left: 66.1%;
+    top: 48.8%;
+    width: 8.8%;
+    height: 5.47%;
+    object-fit: contain;
+    pointer-events: none;
+}
+.date span:first-child {
+    top: 21%;
+}
+.date strong {
+    top: 39%;
+}
+.date span:last-child {
+    top: 65%;
+}
+.page .lotus {
+    left: 23%;
+    top: 43%;
+    width: 54%;
+    height: 19%;
+    background: radial-gradient(ellipse at 50% 55%,#fff8bd99 0%,#ffcb4266 32%,#ffb52333 52%,transparent 73%);
+    animation: lotusBreathing 2.5s ease-in-out infinite;
+    mix-blend-mode: screen;
+}
+@keyframes lotusBreathing {
+    0%,100% {
+        opacity: .25;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Keep all entrance layers hidden until both images are decoded. */
+.loading-status {
+    display: none;
+}
+.initial-loading .loading-status {
+    display: none;
+}
+.initial-loading main {
+    visibility: hidden;
+}
+.initial-loading .tap {
+    animation-play-state: paused;
+}
+
+/* Configurable text overlays */
+.config-text { position:absolute; top:10%; left:10%; width:80%; font-size:6cqw; text-align:center; white-space:pre-wrap; z-index:5; pointer-events:none; }
+.config-welcome { opacity:0; }
+.open .config-welcome { opacity:1; }
+
+.fixed-text {position:absolute;z-index:6;pointer-events:none;display:grid;place-items:center;overflow:visible;}
+.fixed-text img {position:absolute;inset:0;width:100%;height:100%;}
+.fixed-text span {position:relative;white-space:pre-wrap;text-align:center;line-height:1.05;font-family:Georgia,serif;width:100%;}
+.config-closed {transition:opacity var(--opening) ease;}
+.open .config-closed {opacity:0;}
+.fixed-text.config-welcome {transition:opacity var(--opening) ease;}
+
+/* Step 4 interaction layers, without geometry changes. */
+.scratch {z-index:7;}
+.scratch canvas {pointer-events:auto;touch-action:none;}
+.calendar {z-index:8;pointer-events:auto;touch-action:manipulation;}
+.calendar img {pointer-events:none;}
+
+/* V17: full-width portrait phones; desktop keeps original 9:16 canvas. */
+html, body { width:100%; margin:0; overflow-x:hidden; }
+@media (max-width: 767px) and (orientation: portrait) {
+    main { width:100%; max-width:100%; margin:0; }
+    body.locked { height:100dvh; overflow:hidden; }
+}
+.scratch canvas { opacity:1; mix-blend-mode:normal; }
+
+.music-toggle{position:fixed;top:calc(env(safe-area-inset-top,0px) + 6px);right:calc(env(safe-area-inset-right,0px) + 6px);width:44px;height:44px;display:grid;place-items:center;background:none;border:0;padding:0;z-index:9999;touch-action:manipulation;cursor:pointer;}
+.music-toggle span{width:var(--music-size);height:var(--music-size);display:grid;place-items:center;border:1px solid #d9ab4c;border-radius:50%;background:#800020;color:#ffe4a1;}
+.music-toggle svg{width:75%;height:75%;} .music-toggle svg path:not([fill]){fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;}
+
+/* V9 clearance corrections */
+.calendar { top: 68.3%; }
+.calendar-caption { top: 73.5%; }
+
+/* Revision 4: equal calligraphy height, single-line parents. */
+.bride-name.name-art { background-size: auto 90%; }
+
+
+/* Approved page artwork geometry */
+.step-4 .scratch{left:7.5%;top:28.5%;width:85%;height:16%;}
+.step-4 .countdown-heading,.step-4 .calendar-caption,.step-4 .calendar img{display:none;}
+.step-4 .scroll{left:17%;width:66%;top:53.5%;height:14%;}
+.step-4 .calendar{left:29%;top:69%;width:42%;height:4.5%;background:transparent;}
+.step-5 .location{left:34%;top:67%;width:32%;height:8%;opacity:0;}
+.step-7 .lotus{left:23%;top:45%;width:54%;height:15%;}
+
+.modular-text {display:grid;place-items:center;white-space:pre-wrap;text-align:center;line-height:1.05;}
