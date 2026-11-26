@@ -2,7 +2,7 @@ window.WEDDING = {
   "title": "AJ Wedding Invite",
   "music": {
     "enabled": true,
-    "src": "",
+    "src": "assets/music/wedding.mp3",
     "autoplayOnOpen": true,
     "loop": true,
     "volume": 0.35,
