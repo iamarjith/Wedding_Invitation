@@ -460,6 +460,24 @@ window.WEDDING = {
         "displayWidth": 11.99074074074074,
         "displayHeight": 3.671875,
         "visible": true
+      },
+      {
+        "id": "subtitle-divider-upper",
+        "src": "assets/step4/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 21.65,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 2.35,
+        "visible": true
+      },
+      {
+        "id": "subtitle-divider-lower",
+        "src": "assets/step4/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 26.65,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 2.35,
+        "visible": true
       }
     ],
     "date": "2027-05-15T10:30:00+05:30",
