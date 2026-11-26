@@ -39,7 +39,7 @@ const page = (i) => {
     s.className = 'page step-' + (i === 0 ? 0 : i - 1);
     s.innerHTML = `<img class="art" ${i === 0 ? 'src' : 'data-src'}="${c['step' + (i === 0 ? 0 : i - 1)].background}" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy" fetchpriority="low"'} alt="Wedding invitation stage ${i}">`;
     const step = c['step' + (i === 0 ? 0 : i - 1)];
-    for (const item of [...(step.foreground || []), ...(step.couplePhoto ? [step.couplePhoto] : [])]) {
+    for (const item of [...(step.foreground || []).filter(item => !item.aboveCouple), ...(step.couplePhoto ? [step.couplePhoto] : []), ...(step.foreground || []).filter(item => item.aboveCouple)]) {
         if (item.visible === false) continue;
         const spec = step.text?.[item.id];
         const original = TEXT_LAYOUT[i]?.[item.id];

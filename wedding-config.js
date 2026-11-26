@@ -155,7 +155,7 @@ window.WEDDING = {
       "visible": true,
       "fit": "contain"
     },
-    "foreground": [],
+    "foreground": [{"id":"left-foliage","src":"assets/step1/left-foliage.png","left":0,"top":64.5833333333,"displayWidth":19.4444444444,"displayHeight":30.2083333333,"visible":true,"aboveCouple":true}],
     "ampersandImage": "assets/step1/ampersand.png",
     "backgroundStyle": {
       "opacity": 1
