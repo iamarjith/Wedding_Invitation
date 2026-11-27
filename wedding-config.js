@@ -1,0 +1,1588 @@
+// V10: edit this file only. Layer 1 backgrounds are fixed in script.js.
+// componentStyles: CSS property names and values with units, e.g. {"left":"20%","opacity":"0.8","display":"none"}.
+// advancedStyles: [{"selector":".step-7 .lotus i","style":{"animationDuration":"3s"}}]; do not target Layer 1.
+// textLayout is the original text baseline; do not edit.
+window.WEDDING = {
+  "title": "AJ Wedding Invite",
+  "music": {
+    "enabled": true,
+    "src": "assets/music/wedding.mp3",
+    "autoplayOnOpen": true,
+    "loop": true,
+    "volume": 0.35,
+    "showControl": true,
+    "iconSize": 24,
+    "controlStyle": {}
+  },
+  "names": "Amarjith Das & Pitta Jyothi",
+  "autoScroll": {
+    "enabled": true,
+    "holdMs": 2000,
+    "openingDelayMs": 3000,
+    "moveMs": 1000
+  },
+  "step0": {
+    "text": {
+      "invitationHeading": {
+        "text": "You’re\nInvited",
+        "fontSize": 9,
+        "visible": true,
+        "left": 32.361111111111114,
+        "top": 31.744791666666668,
+        "width": 36.25,
+        "height": 8.723958333333332,
+        "color": "#fce1a0",
+        "fontStyle": "italic",
+        "patch": "assets/step0/text-patches/0-invitationHeading.png"
+      },
+      "invitationSubtitle": {
+        "text": "to Our\nWedding Celebration",
+        "fontSize": 4.7,
+        "visible": true,
+        "left": 27.824074074074073,
+        "top": 41.09375,
+        "width": 45.32407407407407,
+        "height": 6.171875,
+        "color": "#fce1a0",
+        "fontStyle": "normal",
+        "patch": "assets/step0/text-patches/0-invitationSubtitle.png"
+      },
+      "tapText": {
+        "text": "Tap to Open",
+        "fontSize": 4,
+        "visible": true
+      }
+    },
+    "welcomeText": {
+      "welcomeHeading": {
+        "text": "Welcome",
+        "fontSize": 8,
+        "visible": true,
+        "left": 32.03703703703704,
+        "top": 32.1875,
+        "width": 37.5462962962963,
+        "height": 4.53125,
+        "color": "#fce1a0",
+        "fontStyle": "italic",
+        "patch": "assets/step0/text-patches/1-welcomeHeading.png"
+      },
+      "welcomeSubtitle": {
+        "text": "to Our\nWedding Celebration",
+        "fontSize": 5,
+        "visible": true,
+        "left": 22.63888888888889,
+        "top": 37.083333333333336,
+        "width": 54.72222222222223,
+        "height": 6.927083333333334,
+        "color": "#fce1a0",
+        "fontStyle": "normal",
+        "patch": "assets/step0/text-patches/1-welcomeSubtitle.png"
+      }
+    },
+    "publish": true,
+    "openingMs": 3000,
+    "effectsBeforeOpen": true,
+    "tapLabel": "Tap to Open",
+    "welcomeOverlays": [],
+    "overlays": [],
+    "particles": {
+      "enabled": true,
+      "count": 450,
+      "speed": 2,
+      "color": "#ffe49a",
+      "shadowColor": "#ffbf28",
+      "shadowBlur": 7,
+      "largeRadius": 4,
+      "smallRadius": 1.7,
+      "minRadius": 0.4
+    },
+    "componentStyles": {
+      ".tap": {},
+      ".welcome": {
+        "clipPath": "polygon(13.5% 32%,16% 27%,23% 23%,35% 22%,50% 22%,65% 22%,77% 23%,84% 27%,86.5% 32%,86.5% 76%,13.5% 76%)"
+      },
+      ".entrance-floor-reveal": {
+        "clipPath": "inset(76% 13.5% 18.7% 13.5%)",
+        "transform": "scaleY(1.32)"
+      },
+      ".entrance-lotus-glow": {
+        "top": "84%",
+        "left": "40%",
+        "width": "20%",
+        "height": "7%",
+        "animationDuration": "2.5s"
+      }
+    }
+  },
+  "step1": {
+    "text": {
+      "heading": {
+        "text": "Together with Our Families,",
+        "fontSize": 5.98878,
+        "visible": true,
+        "left": 16.767024,
+        "top": 12.8139784,
+        "width": 66.465952,
+        "height": 5.7720432,
+        "color": "#a51d20",
+        "fontStyle": "normal",
+        "patch": "assets/step1/text-patches/2-heading.png",
+        "fontFamily": "Great Vibes, Brush Script MT, cursive",
+        "lineHeight": "1.12",
+        "cleanText": true,
+        "fontWeight": "400",
+        "textStroke": "0",
+        "artSrc": "assets/step1/r44-title.png",
+        "artText": "Together with Our Families,"
+      },
+      "subtitle": {
+        "text": "We request your gracious presence\nand blessings",
+        "fontSize": 3.88,
+        "visible": true,
+        "left": 14,
+        "top": 19.1,
+        "width": 72,
+        "height": 5.0,
+        "color": "#800020",
+        "fontStyle": "italic",
+        "patch": "assets/step1/text-patches/2-subtitle.png",
+        "fontFamily": "Times New Roman, Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true,
+        "fontWeight": "700"
+      },
+      "footer": {
+        "text": "at their wedding celebration",
+        "fontSize": 3.3,
+        "visible": true,
+        "left": 48.56481481481482,
+        "top": 69.63541666666667,
+        "width": 42.68518518518519,
+        "height": 2.734375,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step1/text-patches/2-footer.png"
+      }
+    },
+    "publish": true,
+    "groom": {
+      "text": "Amarjith Das",
+      "fontSize": 9.1,
+      "useOriginalArt": true
+    },
+    "groomParents": {
+      "text": "Son of Nibha Das & Krishna Das",
+      "fontSize": 3.15
+    },
+    "bride": {
+      "text": "Pitta Jyothi",
+      "fontSize": 9.1,
+      "useOriginalArt": true
+    },
+    "brideParents": {
+      "text": "Daughter of Pitta Padma & Pitta Sammiah",
+      "fontSize": 3.15
+    },
+    "overlays": [],
+    "couplePhoto": {
+      "src": "assets/step1/couple.png",
+      "width": 1083,
+      "height": 2271,
+      "left": 0,
+      "top": 29.583333333333332,
+      "displayWidth": 50.125,
+      "displayHeight": 59.140625,
+      "visible": true,
+      "fit": "contain"
+    },
+    "foreground": [
+      {
+        "id": "left-foliage",
+        "src": "assets/step1/left-foliage.png",
+        "left": 0,
+        "top": 64.5833333333,
+        "displayWidth": 19.4444444444,
+        "displayHeight": 30.2083333333,
+        "visible": true,
+        "aboveCouple": true
+      },
+      {
+        "id": "upper-divider",
+        "src": "assets/step1/r44-upper-divider.png",
+        "left": 26.0,
+        "top": 5.4,
+        "displayWidth": 48,
+        "displayHeight": 5.5,
+        "visible": true,
+        "fit": "contain"
+      },
+      {
+        "id": "lower-divider",
+        "src": "assets/step1/r44-lower-divider.png",
+        "left": 34.0,
+        "top": 25.1,
+        "displayWidth": 32,
+        "displayHeight": 3.0,
+        "visible": true,
+        "fit": "contain"
+      }
+    ],
+    "ampersandImage": "assets/step1/ampersand.png",
+    "componentStyles": {
+      ".family-ampersand": {},
+      ".groom-name": {},
+      ".bride-name": {},
+      ".groom-parents": {},
+      ".bride-parents": {}
+    }
+  },
+  "step2": {
+    "text": {
+      "heading": {
+        "text": "Our\nLove Story",
+        "fontSize": 11,
+        "left": 21.99074074074074,
+        "top": 15.989583333333332,
+        "width": 58.611111111111114,
+        "height": 13.645833333333332,
+        "color": "#800020",
+        "fontStyle": "italic",
+        "visible": true
+      },
+      "story": {
+        "text": "We found love in each other,\ndreamed of a future together,\nand chose to walk through life hand in hand.\n\nOur love story continues, and forever\nis our next chapter.",
+        "fontSize": 3.65,
+        "visible": true,
+        "left": 9,
+        "top": 35,
+        "width": 82,
+        "height": 15,
+        "fontFamily": "Georgia, serif",
+        "fontStyle": "italic",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "coupleNames": {
+        "text": "Amarjith & Jyothi",
+        "fontSize": 7.5,
+        "visible": true
+      }
+    },
+    "publish": true,
+    "foreground": [
+      {
+        "id": "heading",
+        "src": "assets/step2/heading.png",
+        "left": 20,
+        "top": 15,
+        "displayWidth": 60.00000000000001,
+        "displayHeight": 13.999999999999998,
+        "visible": true
+      },
+      {
+        "id": "heart-divider",
+        "src": "assets/step2/heart-divider.png",
+        "left": 30,
+        "top": 28.999999999999996,
+        "displayWidth": 40,
+        "displayHeight": 6,
+        "visible": true
+      },
+      {
+        "id": "story",
+        "src": "assets/step2/story.png",
+        "left": 15,
+        "top": 35,
+        "displayWidth": 70,
+        "displayHeight": 15.000000000000002,
+        "visible": true
+      },
+      {
+        "id": "divider",
+        "src": "assets/step2/divider.png",
+        "left": 27,
+        "top": 50,
+        "displayWidth": 46,
+        "displayHeight": 4.0000000000000036,
+        "visible": true
+      },
+      {
+        "id": "coupleNames",
+        "src": "assets/step2/coupleNames.png",
+        "left": 18,
+        "top": 54,
+        "displayWidth": 63.99999999999999,
+        "displayHeight": 7.9999999999999964,
+        "visible": true
+      },
+      {
+        "id": "lower-divider",
+        "src": "assets/step2/lower-divider.png",
+        "left": 28.999999999999996,
+        "top": 62,
+        "displayWidth": 42,
+        "displayHeight": 4.0000000000000036,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-01",
+        "src": "assets/step2/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 10.963541666666666,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.6458333333333335,
+        "visible": true
+      }
+    ],
+    "overlays": [],
+    "componentStyles": {}
+  },
+  "step3": {
+    "text": {
+      "heading": {
+        "text": "Our\nJourney Together",
+        "fontSize": 6.8,
+        "visible": true,
+        "left": 26.851851851851855,
+        "top": 13.463541666666668,
+        "width": 45.64814814814815,
+        "height": 9.453125,
+        "color": "#800020",
+        "fontStyle": "italic",
+        "patch": "assets/step3/text-patches/4-heading.png"
+      },
+      "subtitle": {
+        "text": "A few special moments\nthat brought us closer...",
+        "fontSize": 3.1,
+        "visible": true,
+        "left": 32.361111111111114,
+        "top": 26.171875,
+        "width": 36.25,
+        "height": 4.010416666666667,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step3/text-patches/4-subtitle.png"
+      },
+      "metHeading": {
+        "text": "We Met",
+        "fontSize": 4.4,
+        "visible": true,
+        "left": 55,
+        "top": 27,
+        "width": 28,
+        "height": 3.3,
+        "color": "#800020",
+        "fontStyle": "italic",
+        "patch": "assets/step3/text-patches/4-metHeading.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "metText": {
+        "text": "Destiny brought us together,\nand a beautiful story began...",
+        "fontSize": 2.35,
+        "visible": true,
+        "left": 54,
+        "top": 30.3,
+        "width": 31,
+        "height": 3.5,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step3/text-patches/4-metText.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "connectedHeading": {
+        "text": "We Fell in Love",
+        "fontSize": 4.1,
+        "visible": true,
+        "left": 15,
+        "top": 38.4,
+        "width": 30,
+        "height": 3.3,
+        "color": "#800020",
+        "fontStyle": "italic",
+        "patch": "assets/step3/text-patches/4-connectedHeading.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "connectedText": {
+        "text": "With every passing moment,\nour hearts grew closer...",
+        "fontSize": 2.35,
+        "visible": true,
+        "left": 15,
+        "top": 41.7,
+        "width": 30,
+        "height": 3.4,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step3/text-patches/4-connectedText.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "decidedHeading": {
+        "text": "We Chose Forever",
+        "fontSize": 3.8,
+        "visible": true,
+        "left": 54,
+        "top": 49.9,
+        "width": 32,
+        "height": 3.3,
+        "color": "#800020",
+        "fontStyle": "italic",
+        "patch": "assets/step3/text-patches/4-decidedHeading.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "decidedText": {
+        "text": "We promised to stand by\neach other for a lifetime...",
+        "fontSize": 2.35,
+        "visible": true,
+        "left": 54,
+        "top": 53.2,
+        "width": 32,
+        "height": 3.5,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step3/text-patches/4-decidedText.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "nowHeading": {
+        "text": "Now",
+        "fontSize": 4.4,
+        "visible": true,
+        "left": 16,
+        "top": 60.4,
+        "width": 29,
+        "height": 3.4,
+        "color": "#800020",
+        "fontStyle": "italic",
+        "patch": "assets/step3/text-patches/4-nowHeading.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "nowText": {
+        "text": "With divine grace\nand family blessings,\nwe begin our married life...",
+        "fontSize": 2.35,
+        "visible": true,
+        "left": 13,
+        "top": 63.5,
+        "width": 33,
+        "height": 5.5,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step3/text-patches/4-nowText.png",
+        "fontFamily": "Georgia, serif",
+        "lineHeight": "1.12",
+        "cleanText": true
+      }
+    },
+    "publish": true,
+    "foreground": [],
+    "overlays": [],
+    "componentStyles": {}
+  },
+  "step4": {
+    "text": {
+      "heading": {
+        "text": "Save the Date",
+        "fontSize": 9,
+        "visible": true
+      },
+      "subtitle": {
+        "text": "Our Wedding Celebration",
+        "fontSize": 4,
+        "visible": true
+      }
+    },
+    "publish": true,
+    "foreground": [
+      {
+        "id": "heading",
+        "src": "assets/step4/heading.png",
+        "left": 22,
+        "top": 10,
+        "displayWidth": 56.00000000000001,
+        "displayHeight": 12,
+        "visible": true
+      },
+      {
+        "id": "subtitle",
+        "src": "assets/step4/subtitle.png",
+        "left": 25,
+        "top": 23,
+        "displayWidth": 50,
+        "displayHeight": 4.000000000000001,
+        "visible": true
+      },
+      {
+        "id": "countdown-label",
+        "src": "assets/step4/countdown-label.png",
+        "left": 20,
+        "top": 47,
+        "displayWidth": 60.00000000000001,
+        "displayHeight": 6.000000000000005,
+        "visible": true
+      },
+      {
+        "id": "calendar-artwork",
+        "src": "assets/step4/calendar-artwork.png",
+        "left": 27,
+        "top": 69,
+        "displayWidth": 46,
+        "displayHeight": 10.000000000000009,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-01",
+        "src": "assets/step4/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 5.625,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.9322916666666665,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-03",
+        "src": "assets/step4/restored-divider-03.png",
+        "left": 15,
+        "top": 49.427083333333336,
+        "displayWidth": 11.481481481481481,
+        "displayHeight": 3.671875,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-04",
+        "src": "assets/step4/restored-divider-04.png",
+        "left": 73.00925925925927,
+        "top": 49.427083333333336,
+        "displayWidth": 11.99074074074074,
+        "displayHeight": 3.671875,
+        "visible": true
+      },
+      {
+        "id": "subtitle-divider-upper",
+        "src": "assets/step4/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 21.65,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 2.35,
+        "visible": true
+      },
+      {
+        "id": "subtitle-divider-lower",
+        "src": "assets/step4/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 26.65,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 2.35,
+        "visible": true
+      }
+    ],
+    "date": "2027-05-15T10:30:00+05:30",
+    "muhurthamLabel": "Muhurtham",
+    "countdownLabels": [
+      "Days",
+      "Hours",
+      "Minutes",
+      "Seconds"
+    ],
+    "scratchThreshold": 0.3,
+    "calendarDurationMinutes": 120,
+    "scratchImage": "assets/step4/approved-scratch.jpg",
+    "countdownHeadingImage": "assets/step4/countdown-heading.png",
+    "calendarImage": "assets/step4/calendar-art.png",
+    "calendarCaptionImage": "assets/step4/calendar-caption.png",
+    "dateStyle": {},
+    "countdownStyle": {},
+    "calendarStyle": {},
+    "overlays": [],
+    "scratchBrushSize": 85,
+    "componentStyles": {
+      ".scratch": {},
+      ".date": {},
+      ".scroll": {},
+      ".scroll-body": {},
+      ".roller.upper": {},
+      ".roller.lower": {},
+      ".time": {},
+      ".time b": {},
+      ".time small": {},
+      ".calendar": {},
+      ".calendar-caption": {},
+      ".countdown-heading": {}
+    }
+  },
+  "step5": {
+    "text": {
+      "heading": {
+        "text": "Wedding Venue",
+        "fontSize": 8,
+        "visible": true
+      },
+      "venueName": {
+        "text": "Srinivasa Function Hall",
+        "fontSize": 5.3,
+        "visible": true
+      },
+      "venueAddress": {
+        "text": "Near NH-65, Main Road,\nKukatpally, Hyderabad – 500072",
+        "fontSize": 3.4,
+        "visible": true
+      },
+      "mapText": {
+        "text": "Location",
+        "fontSize": 4,
+        "visible": true,
+        "left": 44.351851851851855,
+        "top": 70.72395833333333,
+        "width": 19.39814814814815,
+        "height": 2.5520833333333335,
+        "color": "#fce1a0",
+        "fontStyle": "normal",
+        "patch": "assets/step5/text-patches/6-mapText.png"
+      },
+      "mapCaption": {
+        "text": "Tap to Open in Maps",
+        "fontSize": 3.4,
+        "visible": true,
+        "left": 31.712962962962965,
+        "top": 74.55208333333333,
+        "width": 33.00925925925926,
+        "height": 2.5260416666666665,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step5/text-patches/6-mapCaption.png"
+      }
+    },
+    "publish": true,
+    "foreground": [
+      {
+        "id": "heading",
+        "src": "assets/step5/heading.png",
+        "left": 15,
+        "top": 15,
+        "displayWidth": 70,
+        "displayHeight": 10,
+        "visible": true
+      },
+      {
+        "id": "venue-pin",
+        "src": "assets/step5/venue-pin.png",
+        "left": 40,
+        "top": 28.000000000000004,
+        "displayWidth": 19.999999999999996,
+        "displayHeight": 3.9999999999999982,
+        "visible": true
+      },
+      {
+        "id": "venueName",
+        "src": "assets/step5/venueName.png",
+        "left": 12,
+        "top": 32,
+        "displayWidth": 76,
+        "displayHeight": 3.9999999999999982,
+        "visible": true
+      },
+      {
+        "id": "venueAddress",
+        "src": "assets/step5/venueAddress.png",
+        "left": 18,
+        "top": 36,
+        "displayWidth": 63.99999999999999,
+        "displayHeight": 6,
+        "visible": true
+      },
+      {
+        "id": "hall-photo",
+        "src": "assets/step5/hall-photo.png",
+        "left": 15,
+        "top": 44,
+        "displayWidth": 70,
+        "displayHeight": 19,
+        "visible": true
+      },
+      {
+        "id": "location-artwork",
+        "src": "assets/step5/location-artwork.png",
+        "left": 28.000000000000004,
+        "top": 65,
+        "displayWidth": 43.99999999999999,
+        "displayHeight": 10.999999999999998,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-01",
+        "src": "assets/step5/restored-divider-01.png",
+        "left": 33.98148148148148,
+        "top": 23.307291666666664,
+        "displayWidth": 32.03703703703704,
+        "displayHeight": 4.791666666666667,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-02",
+        "src": "assets/step5/restored-divider-02.png",
+        "left": 38.00925925925926,
+        "top": 40.729166666666664,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.6458333333333335,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-03",
+        "src": "assets/step5/restored-divider-03.png",
+        "left": 38.00925925925926,
+        "top": 63.489583333333336,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.6458333333333335,
+        "visible": true
+      },
+      {
+        "id": "top-divider",
+        "src": "assets/step5/top-divider.png",
+        "left": 38,
+        "top": 8.8,
+        "displayWidth": 24,
+        "displayHeight": 3,
+        "visible": true
+      }
+    ],
+    "venue": "Srinivasa Function Hall, Kukatpally, Hyderabad – 500072",
+    "mapUrl": "",
+    "mapLabel": "Location",
+    "overlays": [],
+    "componentStyles": {
+      ".location": {}
+    }
+  },
+  "step6": {
+    "text": {
+      "heading": {
+        "text": "Get Ready to\nCelebrate",
+        "fontSize": 8,
+        "visible": true
+      },
+      "subtitle": {
+        "text": "Join us as we begin our\nnext chapter together",
+        "fontSize": 3.8,
+        "visible": true,
+        "left": 25,
+        "top": 25,
+        "width": 50,
+        "height": 6,
+        "fontFamily": "Georgia, serif",
+        "fontStyle": "italic",
+        "lineHeight": "1.12",
+        "cleanText": true
+      },
+      "food": {
+        "text": "Delicious\nFood",
+        "fontSize": 2.4,
+        "visible": true,
+        "left": 12.962962962962962,
+        "top": 57.630208333333336,
+        "width": 11.62037037037037,
+        "height": 3.463541666666667,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step6/text-patches/7-food.png"
+      },
+      "music": {
+        "text": "Music &\nCelebration",
+        "fontSize": 2.4,
+        "visible": true,
+        "left": 32.361111111111114,
+        "top": 57.630208333333336,
+        "width": 14.583333333333334,
+        "height": 3.463541666666667,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step6/text-patches/7-music.png"
+      },
+      "moments": {
+        "text": "Cherished\nMoments",
+        "fontSize": 2.4,
+        "visible": true,
+        "left": 53.70370370370371,
+        "top": 57.630208333333336,
+        "width": 14.907407407407408,
+        "height": 3.463541666666667,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step6/text-patches/7-moments.png"
+      },
+      "family": {
+        "text": "Family &\nFriends",
+        "fontSize": 2.4,
+        "visible": true,
+        "left": 75.0925925925926,
+        "top": 57.630208333333336,
+        "width": 13.240740740740742,
+        "height": 3.463541666666667,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step6/text-patches/7-family.png"
+      },
+      "closing": {
+        "text": "We can’t wait to\ncelebrate with you!",
+        "fontSize": 4.4,
+        "visible": true
+      }
+    },
+    "publish": true,
+    "foreground": [
+      {
+        "id": "heading",
+        "src": "assets/step6/heading.png",
+        "left": 22,
+        "top": 10,
+        "displayWidth": 56.00000000000001,
+        "displayHeight": 12,
+        "visible": true
+      },
+      {
+        "id": "subtitle",
+        "src": "assets/step6/subtitle.png",
+        "left": 25,
+        "top": 25,
+        "displayWidth": 50,
+        "displayHeight": 6,
+        "visible": true
+      },
+      {
+        "id": "celebration-art",
+        "src": "assets/step6/celebration-art.png",
+        "left": 12,
+        "top": 33,
+        "displayWidth": 76,
+        "displayHeight": 21.000000000000004,
+        "visible": true
+      },
+      {
+        "id": "icons-and-labels",
+        "src": "assets/step6/icons-and-labels.png",
+        "left": 10,
+        "top": 54,
+        "displayWidth": 80,
+        "displayHeight": 8.999999999999996,
+        "visible": true
+      },
+      {
+        "id": "closing",
+        "src": "assets/step6/closing.png",
+        "left": 18.98148148148148,
+        "top": 64.50520833333333,
+        "displayWidth": 62.03703703703704,
+        "displayHeight": 13.203124999999998,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-01",
+        "src": "assets/step6/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 20.78125,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.9322916666666665,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-02",
+        "src": "assets/step6/restored-divider-02.png",
+        "left": 38.00925925925926,
+        "top": 30.338541666666668,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.6458333333333335,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-03",
+        "src": "assets/step6/restored-divider-03.png",
+        "left": 38.00925925925926,
+        "top": 61.22395833333333,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.671875,
+        "visible": true
+      },
+      {
+        "id": "top-divider",
+        "src": "assets/step5/top-divider.png",
+        "left": 38,
+        "top": 6.0,
+        "displayWidth": 24,
+        "displayHeight": 3,
+        "visible": true
+      }
+    ],
+    "overlays": [],
+    "componentStyles": {}
+  },
+  "step7": {
+    "text": {
+      "heading": {
+        "text": "Your Presence\nMeans a Lot",
+        "fontSize": 7.6,
+        "visible": true
+      },
+      "message": {
+        "text": "Our celebration would be incomplete\nwithout your presence.",
+        "fontSize": 3.7,
+        "visible": true
+      },
+      "invitation": {
+        "text": "Join us as we begin a beautiful new chapter,\nsurrounded by love, laughter and\nyour precious blessings.",
+        "fontSize": 3.6,
+        "visible": true
+      },
+      "blessings": {
+        "text": "Your\nBlessings",
+        "fontSize": 2.5,
+        "visible": true,
+        "left": 18.425925925925927,
+        "top": 66.171875,
+        "width": 11.99074074074074,
+        "height": 2.9166666666666665,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step7/text-patches/8-blessings.png"
+      },
+      "presence": {
+        "text": "Your\nPresence",
+        "fontSize": 2.5,
+        "visible": true,
+        "left": 35.60185185185185,
+        "top": 66.171875,
+        "width": 12.63888888888889,
+        "height": 2.9166666666666665,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step7/text-patches/8-presence.png"
+      },
+      "wishes": {
+        "text": "Your\nWishes",
+        "fontSize": 2.5,
+        "visible": true,
+        "left": 53.05555555555556,
+        "top": 66.171875,
+        "width": 12.314814814814815,
+        "height": 2.9166666666666665,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step7/text-patches/8-wishes.png"
+      },
+      "memories": {
+        "text": "Our\nMemories",
+        "fontSize": 2.5,
+        "visible": true,
+        "left": 70.55555555555556,
+        "top": 66.171875,
+        "width": 11.666666666666666,
+        "height": 2.9166666666666665,
+        "color": "#800020",
+        "fontStyle": "normal",
+        "patch": "assets/step7/text-patches/8-memories.png"
+      }
+    },
+    "publish": true,
+    "foreground": [
+      {
+        "id": "heading",
+        "src": "assets/step7/heading.png",
+        "left": 20,
+        "top": 15,
+        "displayWidth": 60.00000000000001,
+        "displayHeight": 11.000000000000002,
+        "visible": true
+      },
+      {
+        "id": "message",
+        "src": "assets/step7/message.png",
+        "left": 18,
+        "top": 28.000000000000004,
+        "displayWidth": 63.99999999999999,
+        "displayHeight": 6.999999999999995,
+        "visible": true
+      },
+      {
+        "id": "invitation",
+        "src": "assets/step7/invitation.png",
+        "left": 12,
+        "top": 36,
+        "displayWidth": 76,
+        "displayHeight": 8.000000000000002,
+        "visible": true
+      },
+      {
+        "id": "lotus",
+        "src": "assets/step7/lotus.png",
+        "left": 22,
+        "top": 45,
+        "displayWidth": 56.00000000000001,
+        "displayHeight": 15.999999999999998,
+        "visible": true
+      },
+      {
+        "id": "icons-and-labels",
+        "src": "assets/step7/icons-and-labels.png",
+        "left": 12,
+        "top": 62,
+        "displayWidth": 76,
+        "displayHeight": 7.9999999999999964,
+        "visible": true
+      },
+      {
+        "id": "divider",
+        "src": "assets/step7/divider.png",
+        "left": 30,
+        "top": 71,
+        "displayWidth": 40,
+        "displayHeight": 4.0000000000000036,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-01",
+        "src": "assets/step7/restored-divider-01.png",
+        "left": 38.00925925925926,
+        "top": 24.713541666666668,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.6458333333333335,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-02",
+        "src": "assets/step7/restored-divider-02.png",
+        "left": 38.00925925925926,
+        "top": 42.96875,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.671875,
+        "visible": true
+      },
+      {
+        "id": "restored-divider-03",
+        "src": "assets/step7/restored-divider-03.png",
+        "left": 38.00925925925926,
+        "top": 59.557291666666664,
+        "displayWidth": 23.98148148148148,
+        "displayHeight": 3.359375,
+        "visible": true
+      },
+      {
+        "id": "top-divider",
+        "src": "assets/step5/top-divider.png",
+        "left": 38,
+        "top": 12,
+        "displayWidth": 24,
+        "displayHeight": 3,
+        "visible": true
+      },
+      {
+        "id": "paragraph-divider",
+        "src": "assets/step5/top-divider.png",
+        "left": 38,
+        "top": 33.5,
+        "displayWidth": 24,
+        "displayHeight": 2.9999999999999973,
+        "visible": true
+      }
+    ],
+    "overlays": [],
+    "componentStyles": {
+      ".lotus": {}
+    }
+  },
+  "cssImages": {
+    "date_reveal_jpg": "assets/step4/date-reveal.jpg",
+    "scroll_body_jpg": "assets/step4/scroll-body.jpg",
+    "scroll_upper_jpg": "assets/step4/scroll-upper.jpg",
+    "scroll_lower_jpg": "assets/step4/scroll-lower.jpg",
+    "date_reveal_png": "assets/step4/date-reveal.png",
+    "scroll_body_png": "assets/step4/scroll-body.png",
+    "scroll_upper_png": "assets/step4/scroll-upper.png",
+    "scroll_lower_png": "assets/step4/scroll-lower.png",
+    "groom_calligraphy_png": "assets/step1/groom-calligraphy.png",
+    "bride_calligraphy_png": "assets/step1/bride-calligraphy.png"
+  },
+  "textLayout": {
+    "0": {
+      "invitationHeading": {
+        "text": "You’re\nInvited",
+        "fontSize": 9,
+        "left": 32.361111111111114,
+        "top": 31.744791666666668,
+        "width": 36.25,
+        "height": 8.723958333333332,
+        "patch": "assets/step0/text-patches/0-invitationHeading.png",
+        "color": "#fce1a0",
+        "fontStyle": "italic"
+      },
+      "invitationSubtitle": {
+        "text": "to Our\nWedding Celebration",
+        "fontSize": 4.7,
+        "left": 27.824074074074073,
+        "top": 41.09375,
+        "width": 45.32407407407407,
+        "height": 6.171875,
+        "patch": "assets/step0/text-patches/0-invitationSubtitle.png",
+        "color": "#fce1a0",
+        "fontStyle": "normal"
+      },
+      "tapText": {
+        "text": "Tap to Open",
+        "fontSize": 4,
+        "left": 35.60185185185185,
+        "top": 62.734375,
+        "width": 23.61111111111111,
+        "height": 2.890625,
+        "color": "#fce1a0",
+        "fontStyle": "italic"
+      }
+    },
+    "1": {
+      "welcomeHeading": {
+        "text": "Welcome",
+        "fontSize": 8,
+        "left": 32.03703703703704,
+        "top": 32.1875,
+        "width": 37.5462962962963,
+        "height": 4.53125,
+        "patch": "assets/step0/text-patches/1-welcomeHeading.png",
+        "color": "#fce1a0",
+        "fontStyle": "italic"
+      },
+      "welcomeSubtitle": {
+        "text": "to Our\nWedding Celebration",
+        "fontSize": 5,
+        "left": 22.63888888888889,
+        "top": 37.083333333333336,
+        "width": 54.72222222222223,
+        "height": 6.927083333333334,
+        "patch": "assets/step0/text-patches/1-welcomeSubtitle.png",
+        "color": "#fce1a0",
+        "fontStyle": "normal"
+      }
+    },
+    "2": {
+      "heading": {
+        "text": "Together with their families,",
+        "fontSize": 6.4,
+        "left": 17.77777777777778,
+        "top": 13.098958333333332,
+        "width": 65.41666666666667,
+        "height": 5.442708333333333,
+        "patch": "assets/step1/text-patches/2-heading.png",
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "subtitle": {
+        "text": "Request the honor of your presence",
+        "fontSize": 3.7,
+        "left": 20.046296296296294,
+        "top": 19.635416666666668,
+        "width": 61.2037037037037,
+        "height": 2.9166666666666665,
+        "patch": "assets/step1/text-patches/2-subtitle.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "footer": {
+        "text": "at their wedding celebration",
+        "fontSize": 3.3,
+        "left": 48.56481481481482,
+        "top": 69.63541666666667,
+        "width": 42.68518518518519,
+        "height": 2.734375,
+        "patch": "assets/step1/text-patches/2-footer.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      }
+    },
+    "3": {
+      "heading": {
+        "text": "Our\nLove Story",
+        "fontSize": 11,
+        "left": 21.99074074074074,
+        "top": 15.989583333333332,
+        "width": 58.611111111111114,
+        "height": 13.645833333333332,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "story": {
+        "text": "Two hearts, one beautiful journey.\nWith love in our hearts and\nblessings from our families,\nwe begin a new chapter together.",
+        "fontSize": 4.2,
+        "left": 17.77777777777778,
+        "top": 36.901041666666664,
+        "width": 64.76851851851852,
+        "height": 12.916666666666668,
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "coupleNames": {
+        "text": "Amarjith & Jyothi",
+        "fontSize": 7.5,
+        "left": 17.77777777777778,
+        "top": 54.73958333333333,
+        "width": 64.76851851851852,
+        "height": 7.630208333333334,
+        "color": "#800020",
+        "fontStyle": "italic"
+      }
+    },
+    "4": {
+      "heading": {
+        "text": "Our\nJourney Together",
+        "fontSize": 6.8,
+        "left": 26.851851851851855,
+        "top": 13.463541666666668,
+        "width": 45.64814814814815,
+        "height": 9.453125,
+        "patch": "assets/step3/text-patches/4-heading.png",
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "subtitle": {
+        "text": "A few special moments\nthat brought us closer...",
+        "fontSize": 3.1,
+        "left": 32.361111111111114,
+        "top": 26.171875,
+        "width": 36.25,
+        "height": 4.010416666666667,
+        "patch": "assets/step3/text-patches/4-subtitle.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "metHeading": {
+        "text": "We Met",
+        "fontSize": 4.4,
+        "left": 55.648148148148145,
+        "top": 32.734375,
+        "width": 16.85185185185185,
+        "height": 2.7083333333333335,
+        "patch": "assets/step3/text-patches/4-metHeading.png",
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "metText": {
+        "text": "A simple\nintroduction...",
+        "fontSize": 2.4,
+        "left": 57.26851851851852,
+        "top": 35.442708333333336,
+        "width": 16.203703703703702,
+        "height": 3.0989583333333335,
+        "patch": "assets/step3/text-patches/4-metText.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "connectedHeading": {
+        "text": "We Connected",
+        "fontSize": 4.2,
+        "left": 22.314814814814817,
+        "top": 42.552083333333336,
+        "width": 23.98148148148148,
+        "height": 2.890625,
+        "patch": "assets/step3/text-patches/4-connectedHeading.png",
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "connectedText": {
+        "text": "Conversations turned\ninto comfort...",
+        "fontSize": 2.3,
+        "left": 22.63888888888889,
+        "top": 45.625,
+        "width": 23.65740740740741,
+        "height": 2.9166666666666665,
+        "patch": "assets/step3/text-patches/4-connectedText.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "decidedHeading": {
+        "text": "We Decided",
+        "fontSize": 4.4,
+        "left": 55.32407407407407,
+        "top": 52.1875,
+        "width": 22.037037037037038,
+        "height": 3.0729166666666665,
+        "patch": "assets/step3/text-patches/4-decidedHeading.png",
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "decidedText": {
+        "text": "To walk this journey\ntogether for a lifetime...",
+        "fontSize": 2.3,
+        "left": 55.648148148148145,
+        "top": 55.442708333333336,
+        "width": 24.305555555555554,
+        "height": 2.9166666666666665,
+        "patch": "assets/step3/text-patches/4-decidedText.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "nowHeading": {
+        "text": "Now",
+        "fontSize": 4.4,
+        "left": 27.175925925925924,
+        "top": 62.00520833333333,
+        "width": 12.63888888888889,
+        "height": 2.5520833333333335,
+        "patch": "assets/step3/text-patches/4-nowHeading.png",
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "nowText": {
+        "text": "We’re getting married!\nAnd we can’t wait to\ncelebrate with you...",
+        "fontSize": 2.3,
+        "left": 22.63888888888889,
+        "top": 64.73958333333333,
+        "width": 23.333333333333332,
+        "height": 4.348958333333333,
+        "patch": "assets/step3/text-patches/4-nowText.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      }
+    },
+    "5": {
+      "heading": {
+        "text": "Save the Date",
+        "fontSize": 9,
+        "left": 24.25925925925926,
+        "top": 14.374999999999998,
+        "width": 51.80555555555556,
+        "height": 7.8125,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "subtitle": {
+        "text": "Our Wedding Celebration",
+        "fontSize": 4,
+        "left": 26.851851851851855,
+        "top": 23.28125,
+        "width": 46.2962962962963,
+        "height": 2.7083333333333335,
+        "color": "#800020",
+        "fontStyle": "normal"
+      }
+    },
+    "6": {
+      "heading": {
+        "text": "Wedding Venue",
+        "fontSize": 8,
+        "left": 18.425925925925927,
+        "top": 17.994791666666668,
+        "width": 62.5,
+        "height": 6.927083333333334,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "venueName": {
+        "text": "Srinivasa Function Hall",
+        "fontSize": 5.3,
+        "left": 20.046296296296294,
+        "top": 34.557291666666664,
+        "width": 59.90740740740741,
+        "height": 3.0729166666666665,
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "venueAddress": {
+        "text": "Near NH-65, Main Road,\nKukatpally, Hyderabad – 500072",
+        "fontSize": 3.4,
+        "left": 24.583333333333332,
+        "top": 38.177083333333336,
+        "width": 50.83333333333333,
+        "height": 4.557291666666666,
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "mapText": {
+        "text": "Location",
+        "fontSize": 4,
+        "left": 44.351851851851855,
+        "top": 70.72395833333333,
+        "width": 19.39814814814815,
+        "height": 2.5520833333333335,
+        "patch": "assets/step5/text-patches/6-mapText.png",
+        "color": "#fce1a0",
+        "fontStyle": "normal"
+      },
+      "mapCaption": {
+        "text": "Tap to Open in Maps",
+        "fontSize": 3.4,
+        "left": 31.712962962962965,
+        "top": 74.55208333333333,
+        "width": 33.00925925925926,
+        "height": 2.5260416666666665,
+        "patch": "assets/step5/text-patches/6-mapCaption.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      }
+    },
+    "7": {
+      "heading": {
+        "text": "Get Ready to\nCelebrate",
+        "fontSize": 8,
+        "left": 30.74074074074074,
+        "top": 10.0,
+        "width": 41.11111111111111,
+        "height": 11.09375,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "subtitle": {
+        "text": "Join us as we begin our\nnext chapter together",
+        "fontSize": 3.8,
+        "left": 30.416666666666664,
+        "top": 25.442708333333336,
+        "width": 39.166666666666664,
+        "height": 5.104166666666667,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "food": {
+        "text": "Delicious\nFood",
+        "fontSize": 2.4,
+        "left": 12.962962962962962,
+        "top": 57.630208333333336,
+        "width": 11.62037037037037,
+        "height": 3.463541666666667,
+        "patch": "assets/step6/text-patches/7-food.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "music": {
+        "text": "Music &\nCelebration",
+        "fontSize": 2.4,
+        "left": 32.361111111111114,
+        "top": 57.630208333333336,
+        "width": 14.583333333333334,
+        "height": 3.463541666666667,
+        "patch": "assets/step6/text-patches/7-music.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "moments": {
+        "text": "Cherished\nMoments",
+        "fontSize": 2.4,
+        "left": 53.70370370370371,
+        "top": 57.630208333333336,
+        "width": 14.907407407407408,
+        "height": 3.463541666666667,
+        "patch": "assets/step6/text-patches/7-moments.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "family": {
+        "text": "Family &\nFriends",
+        "fontSize": 2.4,
+        "left": 75.0925925925926,
+        "top": 57.630208333333336,
+        "width": 13.240740740740742,
+        "height": 3.463541666666667,
+        "patch": "assets/step6/text-patches/7-family.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "closing": {
+        "text": "We can’t wait to\ncelebrate with you!",
+        "fontSize": 4.4,
+        "left": 30.09259259259259,
+        "top": 67.99479166666667,
+        "width": 41.11111111111111,
+        "height": 5.833333333333333,
+        "color": "#fce1a0",
+        "fontStyle": "italic"
+      }
+    },
+    "8": {
+      "heading": {
+        "text": "Your Presence\nMeans a Lot",
+        "fontSize": 7.6,
+        "left": 26.52777777777778,
+        "top": 16.171875,
+        "width": 48.888888888888886,
+        "height": 9.088541666666666,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "message": {
+        "text": "Our celebration would be incomplete\nwithout your presence.",
+        "fontSize": 3.7,
+        "left": 21.666666666666668,
+        "top": 28.90625,
+        "width": 57.638888888888886,
+        "height": 4.557291666666666,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "invitation": {
+        "text": "Join us as we begin a beautiful new chapter,\nsurrounded by love, laughter and\nyour precious blessings.",
+        "fontSize": 3.6,
+        "left": 15.87962962962963,
+        "top": 36.71875,
+        "width": 69.21296296296296,
+        "height": 6.5625,
+        "color": "#800020",
+        "fontStyle": "italic"
+      },
+      "blessings": {
+        "text": "Your\nBlessings",
+        "fontSize": 2.5,
+        "left": 18.425925925925927,
+        "top": 66.171875,
+        "width": 11.99074074074074,
+        "height": 2.9166666666666665,
+        "patch": "assets/step7/text-patches/8-blessings.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "presence": {
+        "text": "Your\nPresence",
+        "fontSize": 2.5,
+        "left": 35.60185185185185,
+        "top": 66.171875,
+        "width": 12.63888888888889,
+        "height": 2.9166666666666665,
+        "patch": "assets/step7/text-patches/8-presence.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "wishes": {
+        "text": "Your\nWishes",
+        "fontSize": 2.5,
+        "left": 53.05555555555556,
+        "top": 66.171875,
+        "width": 12.314814814814815,
+        "height": 2.9166666666666665,
+        "patch": "assets/step7/text-patches/8-wishes.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      },
+      "memories": {
+        "text": "Our\nMemories",
+        "fontSize": 2.5,
+        "left": 70.55555555555556,
+        "top": 66.171875,
+        "width": 11.666666666666666,
+        "height": 2.9166666666666665,
+        "patch": "assets/step7/text-patches/8-memories.png",
+        "color": "#800020",
+        "fontStyle": "normal"
+      }
+    }
+  },
+  "globalParticles": {
+    "enabled": true,
+    "count": 78,
+    "speed": 0.65,
+    "color": "#ffcc55",
+    "shadowColor": "#eaa400",
+    "shadowBlur": 1.8
+  },
+  "advancedStyles": []
+};
