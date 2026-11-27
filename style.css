@@ -1041,7 +1041,7 @@ html { scrollbar-gutter: stable both-edges; }
 /* R55: original artwork and lotus position. Extend only the clean interior floor
    strip to the original door sill, excluding the higher welcome lotus. */
 .opening .welcome {
- clip-path:polygon(13.5% 32%,16% 27%,23% 23%,35% 22%,50% 22%,65% 22%,77% 23%,84% 27%,86.5% 32%,86.5% 76%,13.5% 76%);
+ clip-path:polygon(13.5% 32%,25.5% 30.5%,25.5% 28%,23.5% 25%,23.5% 23%,35% 22%,50% 22%,65% 22%,76.5% 23%,76.5% 25%,74.5% 28%,74.5% 30.5%,86.5% 32%,86.5% 76%,13.5% 76%);
  -webkit-mask-image:linear-gradient(to bottom,transparent 21%,black 24%);
  mask-image:linear-gradient(to bottom,transparent 21%,black 24%);
 }

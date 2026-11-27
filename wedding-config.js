@@ -81,7 +81,7 @@ window.WEDDING = {
     },
     "publish": true,
     "openingMs": 3000,
-    "effectsBeforeOpen": true,
+    "effectsBeforeOpen": false,
     "tapLabel": "Tap to Open",
     "welcomeOverlays": [],
     "overlays": [],
@@ -99,7 +99,7 @@ window.WEDDING = {
     "componentStyles": {
       ".tap": {},
       ".welcome": {
-        "clipPath": "polygon(13.5% 32%,16% 27%,23% 23%,35% 22%,50% 22%,65% 22%,77% 23%,84% 27%,86.5% 32%,86.5% 76%,13.5% 76%)"
+        "clipPath": "polygon(13.5% 32%,25.5% 30.5%,25.5% 28%,23.5% 25%,23.5% 23%,35% 22%,50% 22%,65% 22%,76.5% 23%,76.5% 25%,74.5% 28%,74.5% 30.5%,86.5% 32%,86.5% 76%,13.5% 76%)"
       },
       ".entrance-floor-reveal": {
         "clipPath": "inset(76% 13.5% 18.7% 13.5%)",
